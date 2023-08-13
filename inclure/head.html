@@ -1,0 +1,32 @@
+[(#REM) Lien vers le flux RSS du site ]
+[<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]
+
+[(#REM) 
+      On appelle les feuilles de style 
+      dans l'ordre de la methode daisy http://daisy.tetue.net/img/daisy-nomenclature.png   
+]
+[<link rel="stylesheet" href="(#CHEMIN{css/materialize.min.css}|direction_css|timestamp)" type="text/css" />] 
+[<link rel="stylesheet" href="(#CHEMIN{css/perso.css}|direction_css|timestamp)" type="text/css" />]    
+
+[(#REM) 2. Style SPIP et ses plugins ]
+[<link rel="stylesheet" href="(#CHEMIN{css/spip.css}|direction_css|timestamp)" type="text/css" />]
+#INSERT_HEAD_CSS
+
+[(#REM)
+	Balise permettant aux plugins d'inserer des appels javascript ;
+	4. C'est ici que SPIP va inserer l'appel de la librairie jQuery
+	5. Et appeler a la fin compacte_head pour agreger et compacter tout le head dans des fichiers statiques si l'option est cochee dans Configuration
+]
+#INSERT_HEAD
+
+[(#REM) 6. Vos scripts ]
+
+[(#REM) Fierement fabrique avec SPIP ]
+[<meta name="generator" content="SPIP (#SPIP_VERSION|header_silencieux)" />]
+
+[(#REM) Favicon ]
+[<link rel="icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />
+[<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />]]
+
+[(#REM) meta robots ]
+[<meta name="robots" content="(#ENV{robots})" />]

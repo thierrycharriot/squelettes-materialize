@@ -1,0 +1,156 @@
+/***
+Description: 
+Dependances:
+Copyright (c) 20230810, bibibricodeur.
+License: WTFPL
+***/
+html {
+	scroll-behavior: smooth;
+  height: 100%;
+}
+a {
+  text-decoration: underline;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+article, aside {
+  margin-top: 3rem;
+}
+.card h1, .card h2 {
+  margin-top: 0;
+}
+img {
+  margin-top: 1.5rem;
+}
+.card .card-action {
+  padding: 1rem 0;
+}
+.card-action {
+  margin-top: 1.2rem;
+}
+.suite {
+  margin: 1.5rem 0;
+}
+
+/* Form */
+legend {
+  padding: 1rem;
+}
+.explication {
+  margin-left: 1rem;
+}
+.editer-groupe {
+  margin: 1rem; 
+}
+textarea {
+  margin-top: 1.5rem;
+  height: auto;
+  padding: 1rem;
+}
+#formulaire_ecrire_auteur_1 > form > p.boutons,
+#formulaire_forum > form > div > p.boutons > input {
+  margin: 1rem auto;
+}
+
+/* Pagination */
+.foliotage {
+  display: flex;
+  justify-content: center;
+}
+.pagination-items {
+  display: flex;
+}
+.pagination-item {
+  margin: 0.6rem;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9px;
+  border: solid 1px #9a9a9a;
+}
+
+/* Elevator */
+#button-top {
+  position: fixed;
+  bottom: 60px;
+  right: 12px;
+  z-index: 99;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#button-top:hover {
+  transition-duration: 0.7s;
+  opacity: 0.3;
+}
+
+/* https://github.com/alsacreations/KNACSS/tree/v7 */
+/* Headings */
+
+h1, .h1-like {
+  font-size: 2.8rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h1, .h1-like {
+    font-size: 3.2rem;
+  }
+}
+
+h2, .h2-like {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h2, .h2-like {
+    font-size: 2.8rem;
+  }
+}
+
+h3, .h3-like {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h3, .h3-like {
+    font-size: 2.4rem;
+  }
+}
+
+h4, .h4-like {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h4, .h4-like {
+    font-size: 2rem;
+  }
+}
+
+h5, .h5-like {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h5, .h5-like {
+    font-size: 1.8rem;
+  }
+}
+
+h6, .h6-like {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  h6, .h6-like {
+    font-size: 1.6rem;
+  }
+}

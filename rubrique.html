@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js">
+<head>
+	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+	<title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
+    <INCLURE{fond=inclure/head} />
+</head>
+<body class="" id="page-top">
+
+    <INCLURE{fond=inclure/header,self=#SELF} />
+
+    <main class="container">
+
+        <div class="row">
+        
+            <article class="col s12 m9">
+                <BOUCLE_rubrique_articles(RUBRIQUES) {id_rubrique}>
+                    <h1>#TITRE</h1>
+                    <B_articles>
+                        <BOUCLE_articles(ARTICLES) {id_rubrique} {par titre} {!id_article='1'} {pagination 3}>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-title">
+                                        <h3><a href="#URL_ARTICLE">#TITRE</a></h3>
+                                    </div>
+                                    [(#INTRODUCTION | couper{360})]
+                                    <div>
+                                        <a href="#URL_ARTICLE" class="waves-effect waves-light btn suite">Lire la suite</a>
+                                    </div>
+                                    <div class="card-action">
+                                        [(#DATE | affdate )] | #LESAUTEURS
+                                    </div>
+                                </div>
+                            </div>
+                        </BOUCLE_articles>
+                        <div class="foliotage">
+                            #PAGINATION
+                        </div>
+                    </B_articles>
+                </BOUCLE_rubrique_articles>           
+            </article>
+
+            <INCLURE{fond=inclure/aside,self=#SELF} />
+
+        </div>
+    
+    </main>
+
+    <INCLURE{fond=inclure/footer,self=#SELF} />
+
+</body>
+</html>
