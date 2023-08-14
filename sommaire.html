@@ -24,23 +24,27 @@
                 </div>
                 </BOUCLE_article_sommaire>
 
-                <h2>Dernier(s) article(s)</h2>
-                <BOUCLE_articles_x3(ARTICLES) {par date} {inverse} {0, 3}>
-                    <div class="card">
-                        <div class="card-content">
-                            <h3 class="card-title">
-                                <a href="#URL_ARTICLE">#TITRE</a>
-                            </h3>
-                            [(#INTRODUCTION | couper{180})]
-                            <div>
-                                <a href="#URL_ARTICLE" class="waves-effect waves-light btn suite">Lire la suite</a>
-                            </div>
-                            <div class="card-action">
-                                [(#DATE | affdate )] | #LESAUTEURS
+                <B_articles_x3>
+                    <h2>Dernier(s) article(s)</h2>
+                    <BOUCLE_articles_x3(ARTICLES) {par date} {inverse} {0, 3}>
+                        <div class="card">
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="#URL_ARTICLE">#TITRE</a>
+                                </h3>
+                                [(#INTRODUCTION | couper{180})]
+                                <div>
+                                    <a href="#URL_ARTICLE" class="waves-effect waves-light btn suite">Lire la suite</a>
+                                </div>
+                                <div class="card-action">
+                                    [(#DATE | affdate )] | #LESAUTEURS
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </BOUCLE_articles_x3>
+                    </BOUCLE_articles_x3>
+                </B_articles_x3>
+                    <h1>Ecrire un article!</h1>
+                <//B_articles_x3>
             </article>
 
             <INCLURE{fond=inclure/aside,self=#SELF} />
