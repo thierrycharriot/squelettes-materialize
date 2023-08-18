@@ -1,0 +1,27 @@
+<aside class="aside col s12 m3" role="complementary">
+    <div class="card">
+        <div class="card-content">
+            #FORMULAIRE_RECHERCHE
+        </div>
+    </div>
+
+    <h4>Derniers articles</h4>
+
+    <BOUCLE_art_asi(ARTICLES) {par date} {inverse} {0, 6} {!id_article='1'}>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">
+                    <span><a href="#URL_ARTICLE">#TITRE</a></span>
+                </div>
+                [(#INTRODUCTION | couper{60})]
+                <div>
+                    <a href="#URL_ARTICLE">Lire la suite</a>
+                </div>
+                <div class="card-action">
+                    [(#DATE | affdate )] | #LESAUTEURS
+                </div>
+            </div>
+        </div>
+    </BOUCLE_art_asi>
+
+</aside>

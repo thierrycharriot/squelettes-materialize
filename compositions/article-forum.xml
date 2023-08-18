@@ -1,0 +1,6 @@
+<composition>
+	<nom>Article forum</nom>
+	<description>Article avec les commentaires</description>
+	<icon>images/composition-test.png</icon>
+	<branche type="article" composition="forum" />
+</composition>

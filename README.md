@@ -1,6 +1,6 @@
 # squelettes-materialize
 
-Squelette minimal et générique basé sur le framework [Materializecss](https://materializecss.com/) pour reprendrer en main le cms [SPIP](https://www.spip.net/fr_rubrique91.html).
+Squelette minimal et générique basé sur le framework [Materializecss](https://materializecss.com/) pour reprendre en main le cms [SPIP](https://www.spip.net/fr_rubrique91.html).
 
 ![Screenshot](screenshot.png)
 
@@ -9,8 +9,6 @@ Squelette minimal et générique basé sur le framework [Materializecss](https:/
 Créer ou adapter un fichier `mes_options.php` dans le dossier `config` puis écrire ou ajouter
 
 ```
-<?php
-
 # https://contrib.spip.net/Multi-squelettes
 $GLOBALS['dossier_squelettes'] = 'squelettes-materialize';
 ```

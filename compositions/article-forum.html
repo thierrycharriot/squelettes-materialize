@@ -27,7 +27,11 @@
                             </div>
                         </div>
                     </div>
-                </BOUCLE_articles>    
+                </BOUCLE_articles>
+                [(#REM) Forum de l'article ]
+                <INCLURE{fond=inclure/forum,id_article} />
+                [<h2 class="forum-titre"><:forum:form_pet_message_commentaire:></h2>
+                (#FORMULAIRE_FORUM)]  
             </article>
 
             <INCLURE{fond=inclure/aside,self=#SELF} />
