@@ -52,7 +52,8 @@ textarea {
   padding: 1rem;
 }
 #formulaire_ecrire_auteur_1 > form > p.boutons,
-#formulaire_forum > form > div > p.boutons > input {
+#formulaire_forum > form > div > p.boutons > input,
+.submit  {
   margin: 1rem auto;
 }
 

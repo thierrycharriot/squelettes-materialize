@@ -1,13 +1,15 @@
 <nav class="light-blue darken-3" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#URL_SITE_SPIP" class="brand-logo">#NOM_SITE_SPIP</a>
       <ul class="right hide-on-med-and-down">
-        <BOUCLE_nav_rub(RUBRIQUES) {racine} {par titre}>
+        [(#REM) Navigation : exclure la rubrique qui contient le modele mentions légales]
+        <BOUCLE_nav_rub(RUBRIQUES) {racine} {par titre} {id_rubrique!==^(1)$}>
             <li class="#EXPOSE{active}"><a href="#URL_RUBRIQUE">#TITRE</a></li>
         </BOUCLE_nav_rub>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <BOUCLE_nav_rub_mob(RUBRIQUES) {racine} {par titre}>
+        [(#REM) Navigation : pour la version mobile]
+        <BOUCLE_nav_rub_mob(RUBRIQUES) {racine} {par titre} {id_rubrique!==^(1)$}>
             <li class="#EXPOSE{active}"><a href="#URL_RUBRIQUE">#TITRE</a></li>
         </BOUCLE_nav_rub_mob>
       </ul>
