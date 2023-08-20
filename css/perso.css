@@ -1,59 +1,88 @@
 /***
 Description: 
 Dependances:
-Copyright (c) 20230810, bibibricodeur.
+Copyright (c) 20230820, bibibricodeur.
 License: WTFPL
 ***/
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
   height: 100%;
 }
+
 a {
   text-decoration: underline;
 }
-a:hover, a:active {
+
+a:hover,
+a:active {
   text-decoration: none;
 }
+
+#logo-container {
+  text-decoration: none;
+}
+
 main {
   min-height: 75vh;
 }
-article, aside {
-  margin-top: 3rem;
+
+article,
+aside {
+  /*margin-top: 3rem;*/
 }
-.card h1, .card h2 {
+
+.card h1,
+.card h2 {
   margin-top: 0;
+}
+.card .card-action a {
+  font-weight: bold;
+  color: #2e7d32 !important;
+}
+.card .card-action a:hover {
+  color: #a5d6a7 !important;
 }
 img {
   margin-top: 1.5rem;
 }
+
 .card .card-action {
   padding: 1rem 0;
 }
+
 .card-action {
   margin-top: 1.2rem;
 }
+
 .suite {
   margin: 1.5rem 0;
+}
+
+footer h3 {
+  font-size: 1.2rem;
 }
 
 /* Form */
 legend {
   padding: 1rem;
 }
+
 .explication {
   margin-left: 1rem;
 }
+
 .editer-groupe {
-  margin: 1rem; 
+  margin: 1rem;
 }
+
 textarea {
   margin-top: 1.5rem;
   height: auto;
   padding: 1rem;
 }
-#formulaire_ecrire_auteur_1 > form > p.boutons,
-#formulaire_forum > form > div > p.boutons > input,
-.submit  {
+
+#formulaire_ecrire_auteur_1>form>p.boutons,
+#formulaire_forum>form>div>p.boutons>input {
   margin: 1rem auto;
 }
 
@@ -62,9 +91,11 @@ textarea {
   display: flex;
   justify-content: center;
 }
+
 .pagination-items {
   display: flex;
 }
+
 .pagination-item {
   margin: 0.6rem;
   font-size: 1.5rem;
@@ -82,11 +113,11 @@ textarea {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
 #button-top:hover {
   transition-duration: 0.7s;
   opacity: 0.3;
 }
-
 /* https://github.com/alsacreations/KNACSS/tree/v7 */
 /* Headings */
 
@@ -157,3 +188,5 @@ h6, .h6-like {
     font-size: 1.6rem;
   }
 }
+
+/* Fin */
